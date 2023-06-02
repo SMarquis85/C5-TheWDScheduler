@@ -42,6 +42,21 @@ $(function () {
   });
 
   // Display the current date in the header of the page
-  var currentDate = dayjs().format("dddd, MMMM D, YYYY");
-  $("#currentDay").text(currentDate);
+  var currentDate = dayjs().format("DDDD, MMMM, YYYY");
+  $("#currentDate").text(currentDate);
+});
+
+
+$(document).ready(function() { 
+  var currentDateElement = $('#currentDate'); 
+
+function updateCurrentDate() { 
+  var currentDate = dayjs().format("dddd, MMMM, YYYY"); 
+  currentDateElement.text(currentDate); 
+}
+
+updateCurrentDate(); 
+
+setInterval(updateCurrentDate, 1000); 
+
 });
