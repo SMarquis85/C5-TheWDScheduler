@@ -5,24 +5,23 @@ $(document).ready(function() {
     var description = $(this).siblings(".description").val();
     localStorage.setItem(hour, description);
   });
-  
-// Get user input from local storage and set the textarea values
-$(".time-block").each(function () {
-  var hour = $(this).attr("id");
-  var description = localStorage.getItem(hour);
-  $(this).find(".description").val(description);
-});
 
-   // Display the current day and date
-   function updateCurrentDay() {
+  // Get user input from local storage and set the textarea values
+  $(".time-block").each(function () {
+    var hour = $(this).attr("id");
+    var description = localStorage.getItem(hour);
+    $(this).find(".description").val(description);
+  });
+
+  // Display the current day and date
+  function updateCurrentDate() {
     var currentDay = dayjs().format("dddd");
     var currentDate = dayjs().format("MMMM D, YYYY");
     var currentDateTime = currentDay + ' ' + currentDate;
-    $("#currentDay").text(currentDateTime);
+    $("#currentDate").text(currentDateTime);
   }
 
-  updateCurrentDay();
+  updateCurrentDate();
 
-  setInterval(updateCurrentDay, 1000);
-  
+  setInterval(updateCurrentDate, 1000);
 });
