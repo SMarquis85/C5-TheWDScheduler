@@ -70,3 +70,7 @@ $(document).ready(function () {
   // Update the current date in the header
   updateCurrentDate();
 });
+
+// Call the initial update of time block classes
+$(document).ready(updateColorCoding);
+
