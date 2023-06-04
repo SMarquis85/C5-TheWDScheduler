@@ -2,14 +2,14 @@ $(document).ready(function () {
   // Function to update the time block classes
   function updateColorCoding() {
     var currentTime = dayjs();
-
-    $(".time-block").each(function () {
+  
+    $(".time-block").each(function() {
       var hour = parseInt($(this).attr("id").split("-")[1]);
       var timeBlockStart = dayjs().set("hour", hour).startOf("hour");
       var timeBlockEnd = dayjs().set("hour", hour).endOf("hour");
-
+  
       $(this).removeClass("past present future");
-
+  
       if (currentTime.isBefore(timeBlockStart)) {
         $(this).addClass("future");
       } else if (currentTime.isBetween(timeBlockStart, timeBlockEnd)) {
@@ -44,6 +44,7 @@ $(document).ready(function () {
     updateCurrentDate();
   });
 
+  function updateColorCoding() {
     var currentHour = dayjs().hour();
   
     $(".time-block").each(function() {
@@ -57,6 +58,7 @@ $(document).ready(function () {
         $(this).removeClass("past present").addClass("future");
       }
     });
+  }
  
   
   // Update the time block classes every minute
@@ -69,4 +71,6 @@ $(document).ready(function () {
   updateCurrentDate();
 
 // Call the initial update of time block classes
-$(document).ready(updateColorCoding);
+$(document).ready(function() {
+  updateColorCoding();
+});
