@@ -1,6 +1,14 @@
+const dayjs = window.dayjs;
+
 $(document).ready(function() {
-  // Function to update the time block classes
-  function updateColorCoding() {
+  // Function to update the current date and time
+  function updateDateTime() {
+    var currentDate = dayjs().format('dddd, MMMM D, YYYY');
+    $('#currentDate').text(currentDate);
+  }
+
+  // Function to update the time blocks based on the current time
+  function updateTimeBlocks() {
     var currentHour = dayjs().hour();
   
     $(".time-block").each(function() {
@@ -30,18 +38,13 @@ $(document).ready(function() {
     $(this).find(".description").val(description);
   });
 
-  // Call the initial update of time block classes
-  updateColorCoding();
-  // Update the current date
-  updateCurrentDate();
+  // Call the initial update of time blocks and current date
+  updateDateTime();
+  updateTimeBlocks();
 
-  // Display the current day and date
-  function updateCurrentDate() {
-    var currentDate = dayjs().format('dddd, MMMM D, YYYY');
-    $('#currentDate').text(currentDate);
-  }
-  // Update the time block classes every minute
-  setInterval(updateColorCoding, 60000);
+  // Update the time blocks and current date every minute
+  setInterval(function() {
+    updateDateTime();
+    updateTimeBlocks();
+  }, 60000);
 });
-
-
