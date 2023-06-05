@@ -15,9 +15,9 @@ $(document).ready(function() {
       if (blockHour < currentHour) {
         $(this).removeClass("present future").addClass("past");
       } else if (blockHour === currentHour) {
-        $(this).removeClass("past future").addClass("present").removeClass("future");
+        $(this).removeClass("past future").addClass("present");
       } else {
-        $(this).removeClass("past present").addClass("future").removeClass("present");
+        $(this).removeClass("past present").addClass("future");
       }
     });
   }
