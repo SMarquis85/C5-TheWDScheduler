@@ -1,5 +1,3 @@
-const dayjs = window.dayjs;
-
 $(document).ready(function() {
   // Function to update the current date and time
   function updateDateTime() {
@@ -17,9 +15,9 @@ $(document).ready(function() {
       if (blockHour < currentHour) {
         $(this).removeClass("present future").addClass("past");
       } else if (blockHour === currentHour) {
-        $(this).removeClass("past future").addClass("present");
+        $(this).removeClass("past future").addClass("present").removeClass("future");
       } else {
-        $(this).removeClass("past present").addClass("future");
+        $(this).removeClass("past present").addClass("future").removeClass("present");
       }
     });
   }
