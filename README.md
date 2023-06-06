@@ -50,10 +50,10 @@ The following animation demonstrates the application functionality:
 
 ### How the Web Scheduler looks: When you enter data in a time block.
 
-![Develop/images/WDScheduler1.png](Develop\images\WDScheduler1.png)
+![Develop/images/WDScheduler1.png](Develop/images/WDScheduler1.png)
 
 ### How the Web Scheduler looks: When you remove the data entered.
 
-![Develop\images\WDScheduler2.png](Develop\images\WDScheduler2.png)
+![Develop/images/WDScheduler2.png](Develop/images/WDScheduler2.png)
 
 The assignment can be viewed here: [C4-JSQuiz]( https://smarquis85.github.io/C4-JSQuiz/)
