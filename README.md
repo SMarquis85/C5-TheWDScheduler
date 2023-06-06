@@ -56,4 +56,4 @@ The following animation demonstrates the application functionality:
 
 ![Develop/images/WDScheduler2.png](Develop/images/WDScheduler2.png)
 
-The assignment can be viewed here: [C5-TheWDScheduler](https://smarquis85.github.io/C5-TheWDScheduler/)
+The assignment can be viewed here: [C5-TheWDScheduler]()
