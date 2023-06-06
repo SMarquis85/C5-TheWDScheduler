@@ -20,7 +20,7 @@ $(document).ready(function() {
         $(this).removeClass("past present").addClass("future");
       }
     });
-  }
+  } 
 
   // Add a listener for click events on the save button
   $(".saveBtn").on("click", function () {
