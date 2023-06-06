@@ -42,5 +42,8 @@ THEN the saved events persist
 
 The following animation demonstrates the application functionality:
 
+### I was not able to solve the issue in the code for displaying the correct colors.
+
+![Develop\images\WDScheduler.png](Develop\images\WDScheduler.png)
 
 
